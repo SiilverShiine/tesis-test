@@ -35,7 +35,6 @@ def show_image(image_name):
 def get_message_response():
     """Looks for a response based on the user's intent and provides an associated response."""
     response_generator: ResponsesGenerator = ResponsesGenerator()
-    messages_proxy: ProxyInterface = MessagesProxy(response_generator)
     user_request: Request = request
 
     return messages_proxy.handle_request(user_request)
